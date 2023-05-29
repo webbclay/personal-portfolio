@@ -1,0 +1,290 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    background: #080808;
+    color: #fff;
+}
+#header
+{
+    width: 100%;
+    height: 100vh;
+}
+.container
+{
+    padding: 10px 10%;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo
+{
+    width: 140px;
+}
+nav ul li
+{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a 
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after
+{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after
+{
+    width: 100%;
+}
+.header-text
+{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1
+{
+    margin-top: 20px;
+    font-size: 60px;
+}
+.header-text h1 span
+{
+    color: #ff004f;
+}
+.btn
+{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    border-style: solid;
+    border-color: #626262;
+    border-width: 3px;
+    padding: 2px;
+}
+.btn:hover
+{
+    opacity: 50%;
+}
+.btn-linkedin 
+{
+  background: #0E76A8;
+  border-radius: 8px;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #084461;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1.5;
+  align-items: center;
+  justify-content: center;
+  background: lighten(#0E76A8,45%);
+}
+.btn-linkedin:link, .btn-linkedin:visited 
+{
+  color: #fff;
+}
+.btn-linkedin:active, .btn-linkedin:hover 
+{
+  background: #084461;
+  color: #fff;
+}
+.home
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.header-text
+{
+    flex-basis: 50%;
+}
+.home-img img
+{
+    width: 100%;
+    height: 550px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+.home-img
+{
+    flex-basis: 45%;
+}
+.theme-container
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: fixed;
+    top: 10;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s; 
+}
+.theme-container:hover 
+{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/*------- About Me ---------*/
+#about
+{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1
+{
+    flex-basis: 35%;
+}
+.about-col-1 img
+{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2
+{
+    flex-basis: 60%;
+}
+.subtitle
+{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 15px;
+}
+.tab-titles
+{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links
+{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after
+{
+    width: 100%;
+}
+.tab-contents ul li
+{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span
+{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents
+{
+    display: none;
+}
+.tab-contents.active-tab
+{
+    display: block;
+}
+
+/* ---- Certifications ---- */
+#certifications
+{
+    padding: 30px 0;
+}
+.cert
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    margin-top: 40px;
+    grid-gap: 40px;
+}
+.cert div
+{
+    background-color: #262626;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 300;
+}
+.cert-logo
+{
+    padding-top: 10px;
+    width: 220px;
+    height: 220px;
+}
+.cert-logo-ceh
+{
+    border-radius: 20px;
+}
+.cert h3
+{
+    margin-top: 10px;
+}
+.cred-btn
+{
+    background-color: #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #626262;
+    border-width: 3px;
+    padding: 2px;
+    
+}
+.cred-btn:hover
+{
+    opacity: 50%;
+}
+/*-- Portfolio --*/
+#portfolio
+{
+    padding: 30px 0;
+}

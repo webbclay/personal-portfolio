@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible, initial-scale=1.0">
+    <meta name="viewport" content="width-device=width, initial-scale=1.0">
+    <title>Clayton's Personnel Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>C</span>layton.</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Certifications</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="theme-container shadow-dark">
+                    <img id="theme-icon" src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" alt="">
+                </div>
+            </nav>
+            <div class="home">
+                <div class="header-text">
+                    <p>Cybersecurity Professional</p>
+                    <h1>Hello, I am <span>Clayton</span><br>from Texas</h1>
+                    <a href="https://www.linkedin.com/in/claytonwebb518b48153" title="LinkedIn" class="btn btn-linkedin btn-lg"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+                    <a href="docs/ClaytonWebbResume.txt"><button class="btn"><i class="fa fa-download"></i> Resume</button></a>
+                </div> 
+                <div class="home-img">
+                    <img src="images/Webb0346.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Abount Me  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Webb0346.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Summary portion of resume.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>RMF</span><br>A&A</li>
+                            <li><span>SIEM</span><br>Splunk</li>
+                            <li><span>Scanning</span><br>Nessus/Tenable</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Raytheon Technologies</span><br>Senior Cyber Engineer</li>
+                            <li><span>National Security Agency</span><br>Summer Intern</li>
+                            <li><span>U.S. Army</span><br>Army Intelligence Officer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>BBA - Management Information Systems</span><br>University of Oklahoma</li>
+                            <li><span>Masters of Science - Cybersecurity and Information Assuarance</span><br>Western Governers University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---  Certifications --->
+    <div id="certifications">
+        <div class="container">
+            <h1 class="subtitle">Certifications</h1>
+            <div class="cert">
+                <div>
+                    <img class="cert-logo" src="images/cissp.png">
+                    <h3>Certified Information System Security Officer</h3>
+                    <p>Valid through April 30, 2024</p>
+                    <p>ISC(2) Account ID: 95234</p>
+                    <a href="https://www.credly.com/badges/db2c786f-e321-49bd-b2db-b322fc36f534/linked_in" title="CISSP Badge""><button class="cred-btn">Show Credential</button></a>
+                </div>
+                <div>
+                    <img class=" cert-logo cert-logo-ceh" src="images/ceh.jpg">
+                    <h3>Certified Ethical Hacker</h2>
+                    <p>Valid through October 12, 2024</p>
+                    <p>Certification Number: ECC7961802534</p>
+                    <a href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=41i4yNRz8yAZIboCrVas5PcdaiK9b4AMWTnDIPxu6mI" title="CEH Badge"><button class="cred-btn">Show Credential</button></a>
+                </div>
+                <div>
+                    <img class="cert-logo" src="images/sec+.png">
+                    <h3>CompTIA Security+</h2>
+                    <p>Valid through January 22, 2026</p>
+                    <p>Canidate ID: COMP001021531180</p>
+                    <a href="https://www.credly.com/badges/61d75335-a0bf-4e0a-9f0e-399844cca636/public_url" title="CompTIA Sec+ Badge"><button class="cred-btn">Show Credential</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--   Portfolio   -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Portfolio</h1>
+            <p>Test</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Clayton Webb 2023</p>
+    </footer>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html> 
